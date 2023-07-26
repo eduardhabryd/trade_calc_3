@@ -1,0 +1,63 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0e0e0;
+}
+
+@media screen and (max-width: 768px) {
+  /* Style for small screens */
+  .container {
+    /* Set the size of the container */
+    width: 300px;
+    height: 400px;
+    /* Center the container horizontally and vertically */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Additional styling */
+    background-color: white;
+    border-radius: 20px;
+  }
+
+  .commission {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .commission select {
+    display: inline;
+    background-color: transparent;
+    border: none;
+    color: #808080;
+    outline: none;
+    font-family: Inter Light;
+    font-size: 1rem;
+  }
+
+  .commission p {
+    display: inline;
+    font-family: Inter Light;
+  }
+
+  .divider {
+    position: relative;
+    top: 18px;
+    height: 1.5px;
+    margin: 0 10px;
+    background-color: #000000;
+  }
+}

@@ -1,0 +1,443 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set base font size and line height */
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Set background color and font color */
+body {
+  background-color: #4e5576;
+  color: #fff;
+  font-family: sans-serif;
+  /* background-image: url(/src/img/background4.3.png); */
+  background: #120b2a;
+  background: linear-gradient(90deg, #120b2a 0%, #120d2b 35%, #110c2a 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Center the input form */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 1rem;
+}
+
+/* Style the input form */
+.input-form {
+  max-width: 100rem;
+  width: 100%;
+  background-color: #070218;
+  padding: 10rem;
+  text-align: left;
+  max-height: 120rem;
+  height: 40rem;
+  border: 0.5rem solid;
+  border-top: 4rem solid;
+  border-radius: 2rem;
+  border-color: #120b2a;
+}
+
+/* prettier-ignore */
+.border {
+    /* border: 0.1rem solid; */
+    border-radius: 2rem;
+    border: 0.1rem solid black;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    box-shadow: 2px 29px 70px 32px rgba(0,0,0,0.81);
+  }
+
+.input-form input,
+.input-form .button {
+  display: block;
+  width: 100%;
+  max-width: 30rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid;
+  border-color: #393e75;
+  background-color: #171e3b;
+  color: white;
+}
+
+.input-form .button {
+  background-color: #1a4f5d;
+  color: white;
+  font-weight: normal;
+  cursor: pointer;
+  border-color: #04e9be;
+  position: relative;
+  top: 3rem;
+}
+
+/* ====================================================================================================================STYLE FOR SMALL SCREENS */
+@media screen and (min-width: 320px) {
+  /* Style for small screens */
+
+  .input-group {
+    margin-top: -0.5rem;
+    position: relative;
+    top: -3rem;
+  }
+
+  .input-form .button {
+    background-color: #1a4f5d;
+    color: white;
+    font-weight: normal;
+    cursor: pointer;
+    border-color: #04e9be;
+    position: relative;
+    top: -2rem;
+  }
+
+  .input-form {
+    padding: 5rem;
+    /* height: 100vh; */
+  }
+
+  .input-form input,
+  .input-form .button {
+    max-width: 25rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    position: relative;
+    top: -4.5rem;
+    left: 0rem;
+    text-align: center;
+  }
+
+  label {
+    font-size: 0.8rem;
+    position: relative;
+    left: 0rem;
+    top: 1rem;
+    color: #489bf8;
+    font-family: Consolas;
+  }
+
+  /* =============================POPUP */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 9999;
+    display: block;
+    width: 18rem;
+    height: 15rem;
+    background-color: #070218;
+  }
+
+  .popup.show {
+    display: block;
+  }
+  /* ==============CLOSE BUTTON POPUP */
+  .popup .close {
+    position: absolute;
+    top: -0.7rem;
+    right: 0.4rem;
+    font-size: 2.5rem;
+    color: #999;
+    cursor: pointer;
+  }
+
+  /* =====================POSITION NUMBER TEXT POPUP */
+  .popup .content h1 {
+    position: relative;
+    top: 0rem;
+    font-size: 4.5rem;
+    color: #4a9cff;
+    font-family: Consolas;
+  }
+
+  /* =============== TOP TEXT OF POPUP */
+  .popup .content .text {
+    position: relative;
+    top: 1rem;
+    text-align: center;
+    font-family: Consolas;
+    font-size: 1.1em;
+  }
+  /* =======================DIVIDER POPUP */
+  .solid {
+    border-top: 0.1rem solid #49538f;
+    color: #49538f;
+    background-color: #49538f;
+    width: 100%;
+    position: relative;
+    top: 0rem;
+  }
+  /* ===============================COPY BUTTON POPUP */
+  .copy {
+    position: relative;
+    top: 1rem;
+    left: 1.65rem;
+    width: 12rem;
+    height: 2.5rem;
+    border: 1px solid;
+    font-size: 1rem;
+    color: #828aaf;
+    background-color: #1a4f5d;
+    color: white;
+    font-weight: normal;
+    cursor: pointer;
+    border-color: #04e9be;
+    border-radius: 0.5rem;
+  }
+  /* COPY BUTTON TEXT */
+  .copy p {
+    position: relative;
+    top: 0.5rem;
+    text-align: center;
+  }
+
+  /* ==================== CALCULATE BUTTON TEXT */
+  .button p {
+    position: relative;
+    left: 0rem;
+    text-align: center;
+  }
+
+  /* ========================= COMMISION RATE */
+  .commission {
+    position: relative;
+    top: -8rem;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .commission select {
+    display: inline;
+    background-color: transparent;
+    border: none;
+    color: #489bf8;
+    outline: none;
+  }
+
+  .commission p {
+    display: inline;
+    font-family: Consolas;
+  }
+}
+/* MOBILE L */
+@media screen and (min-width: 380px) {
+  .commission {
+    position: relative;
+    top: -7.6rem;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 419px) {
+  .commission {
+    position: relative;
+    top: -7.6rem;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  h1,
+  .input-group,
+  .input-form .button {
+    top: 1rem;
+  }
+  h1 {
+    top: -2rem;
+  }
+}
+/* ===========================================================================================================================MEDIUM SCREENS */
+
+@media screen and (min-width: 576px) {
+  /* Style for small screens */
+  .input-form {
+    padding: 5rem;
+    /* height: 100vh; */
+  }
+
+  .input-form input,
+  .input-form .button {
+    max-width: 60rem;
+  }
+  .button p {
+    text-align: center;
+  }
+}
+
+/* ==============================================================================================================BIG SCREENS */
+@media screen and (min-width: 768px) {
+  /* Style for medium screens */
+  .input-form {
+    max-width: 60rem;
+    padding: 5rem;
+  }
+
+  .input-form input,
+  .input-form .button {
+    max-width: 60rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-family: sans-serif;
+    position: relative;
+    top: -3.2rem;
+    left: 0rem;
+  }
+
+  label {
+    font-size: 1rem;
+    position: relative;
+    left: 0rem;
+    top: 1rem;
+    color: #489bf8;
+    font-family: Consolas;
+  }
+
+  .input-group {
+    margin-top: -1rem;
+    position: relative;
+    top: -0.5rem;
+  }
+
+  .input-form .button {
+    position: relative;
+    top: 1rem;
+    font-size: 1.1rem;
+  }
+  /* POPUP */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 9999;
+    display: block;
+    width: 30rem;
+    height: 25rem;
+    background-color: #070218;
+  }
+
+  .popup.show {
+    display: block;
+  }
+
+  .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+  }
+  /* =====================POSITION NUMBER TEXT POPUP */
+  .popup .content h1 {
+    position: relative;
+    top: 3.5rem;
+    font-size: 7rem;
+    color: #4a9cff;
+    font-family: Consolas;
+  }
+  /* =============== TOP TEXT OF POPUP */
+  .popup .content .text {
+    position: relative;
+    top: 3.5rem;
+    text-align: center;
+    font-family: Consolas;
+    font-size: 1.5rem;
+  }
+  /* =======================DIVIDER POPUP */
+  .solid {
+    border-top: 0.1rem solid #49538f;
+    color: #49538f;
+    background-color: #49538f;
+    width: 100%;
+    position: relative;
+    top: 3rem;
+  }
+  /* ===============================COPY BUTTON POPUP */
+  .copy {
+    position: relative;
+    top: 5rem;
+    left: 6rem;
+    width: 15rem;
+    height: 3rem;
+    border: 1px solid;
+    font-size: 1.2rem;
+    color: #828aaf;
+    background-color: #1a4f5d;
+    color: white;
+    font-weight: normal;
+    cursor: pointer;
+    border-color: #04e9be;
+    border-radius: 0.5rem;
+  }
+  /* COPY BUTTON TEXT */
+  .copy p {
+    position: relative;
+    top: 0.5rem;
+    text-align: center;
+  }
+  /* ==================== CALCULATE BUTTON TEXT */
+  .button p {
+    position: relative;
+    left: 0rem;
+    text-align: center;
+  }
+  /* ========================= COMMISION RATE */
+  .commission {
+    position: relative;
+    top: -7.6rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .commission select {
+    display: inline;
+    border: none;
+    color: #489bf8;
+    outline: none;
+  }
+
+  .commission p {
+    display: inline;
+    font-family: Consolas;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
