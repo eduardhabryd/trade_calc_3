@@ -13,74 +13,216 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #e0e0e0;
+  font-family: "Roboto", sans-serif;
 }
 
-@media screen and (max-width: 768px) {
-  /* Define Variables */
-  :root {
-    /* Container */
-    --container-width: 320px;
-    --container-height: 420px;
-    --border-radius: 30px;
+/*============================================= MOBILE */
+/* Define Variables */
+:root {
+  /* Container */
+  --container-width: 320px;
+  --container-height: 420px;
+  --border-radius: 50px;
 
-    /* Commission */
-    --commission-font-size: 1.35rem;
-  }
-  /* Container, commission, divider */
-  .container {
-    /* Set the size of the container */
-    width: var(--container-width);
-    height: var(--container-height);
-    /* Center the container horizontally and vertically */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Additional styling */
-    background-color: white;
-    border-radius: var(--border-radius);
-  }
+  /* Commission */
+  --commission-font-size: 1.2rem;
 
-  .commission {
-    position: relative;
-    top: 15px;
-    text-align: center;
-    font-size: var(--commission-font-size);
-  }
+  /* Heading, forms, button */
+  --heading-font-size: 30px;
+  --input-height: 37px;
+  --input-width: 250px;
+  --label-font-size: 10px;
+  --button-height: 47px;
+  --button-width: 250px;
+  --button-font-size: 20px;
+}
+/*======================================= Container, commission, divider */
+.container {
+  /* Set the size of the container */
+  width: var(--container-width);
+  height: var(--container-height);
+  /* Center the container horizontally and vertically */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Additional styling */
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
 
-  .commission select {
-    display: inline;
-    background-color: transparent;
-    border: none;
-    color: #808080;
-    outline: none;
-    font-family: Inter Light;
-    font-size: var(--commission-font-size);
-  }
+.commission {
+  position: relative;
+  top: 15px;
+  text-align: center;
+  font-size: var(--commission-font-size);
+  font-weight: 300;
+}
 
-  .commission p {
-    display: inline;
-    font-family: Inter Light;
-  }
+.commission select {
+  display: inline;
+  background-color: transparent;
+  border: none;
+  color: #808080;
+  outline: none;
+  font-size: var(--commission-font-size);
+  font-weight: 100;
+}
 
-  .divider {
-    position: relative;
-    top: 27px;
-    height: 1px;
-    margin: 0 15px;
-    background-color: #000000;
-  }
-  /* Heading, Forms, Button */
-  .heading {
-    text-align: center;
-    position: relative;
-    top: 45px;
-    font-size: 33px;
-  }
-  .input-form {
-    padding: 10rem;
-    text-align: left;
-    height: 100px;
-    width: 200px;
-  }
+.commission p {
+  display: inline;
+}
+
+.divider {
+  position: relative;
+  top: 27px;
+  height: 1px;
+  margin: 0 15px;
+  background-color: #000000;
+}
+/* ===================================== Heading, Forms */
+.heading {
+  text-align: center;
+  position: relative;
+  top: 45px;
+  font-size: var(--heading-font-size);
+  font-weight: 900;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 67px;
+}
+input {
+  border: none;
+  outline: none;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  height: var(--input-height);
+  width: var(--input-width);
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: var(--label-font-size);
+}
+/* ==================================  Button */
+.button {
+  margin-top: 15px;
+  position: relative;
+  height: var(--button-height);
+  width: var(--button-width);
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.button p {
+  font-weight: 500;
+  font-size: var(--button-font-size);
+  padding-top: 11px;
+}
+/* ===================== MODAL */
+/* =============================POPUP */
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 9999;
+  display: block;
+  width: 300px;
+  height: 300px;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+}
+
+.popup.show {
+  display: block;
+}
+/* ==============CLOSE BUTTON POPUP */
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 23px;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* =====================POSITION NUMBER TEXT POPUP */
+.popup .content h1 {
+  text-align: center;
+  position: relative;
+  top: 20px;
+  font-size: 80px;
+  font-weight: 900;
+  color: #000000;
+}
+
+/* =======================DIVIDER POPUP */
+.solid {
+  border-top: 3px solid #000000;
+  color: #000000;
+  background-color: #000000;
+  width: 100%;
+  position: relative;
+  top: 30px;
+}
+/* ===============================COPY BUTTON POPUP */
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+.copy {
+  position: relative;
+  top: 60px;
+  width: 200px;
+  height: 80px;
+  border: 1px solid;
+  font-size: 40px;
+  color: white;
+  background-color: #000000;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  border-color: #000000;
+  border-radius: 10px;
+}
+/* COPY BUTTON TEXT */
+.copy p {
+  padding-top: 12px;
+  text-align: center;
+}
+
+.copied-text {
+  font-size: 18px;
+  position: relative;
+  top: 15px;
+}
+/* =========================== OVERLAY AND HIDDEN */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }

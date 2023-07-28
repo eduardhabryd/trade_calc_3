@@ -38,8 +38,10 @@ class buttonsView {
 
   changeCopyButtonText() {
     clearTimeout(this.changeCopyButtonTextTimer);
-    this._btnCopyText.textContent = "Copied to clipboard ✔";
+    // this._btnCopyText.classList.toggle("copied-text");
+    this._btnCopyText.textContent = "Copied ✔";
     this.changeCopyButtonTextTimer = setTimeout(() => {
+      // this._btnCopyText.classList.toggle("copied-text");
       this._btnCopyText.textContent = "Copy";
     }, TIMEOUT_SEC * 1000);
   }
