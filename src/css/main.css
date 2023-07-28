@@ -16,11 +16,21 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  /* Style for small screens */
+  /* Define Variables */
+  :root {
+    /* Container */
+    --container-width: 320px;
+    --container-height: 420px;
+    --border-radius: 30px;
+
+    /* Commission */
+    --commission-font-size: 1.35rem;
+  }
+  /* Container, commission, divider */
   .container {
     /* Set the size of the container */
-    width: 300px;
-    height: 400px;
+    width: var(--container-width);
+    height: var(--container-height);
     /* Center the container horizontally and vertically */
     position: absolute;
     top: 50%;
@@ -28,14 +38,14 @@ body {
     transform: translate(-50%, -50%);
     /* Additional styling */
     background-color: white;
-    border-radius: 20px;
+    border-radius: var(--border-radius);
   }
 
   .commission {
     position: relative;
-    top: 10px;
+    top: 15px;
     text-align: center;
-    font-size: 1rem;
+    font-size: var(--commission-font-size);
   }
 
   .commission select {
@@ -45,7 +55,7 @@ body {
     color: #808080;
     outline: none;
     font-family: Inter Light;
-    font-size: 1rem;
+    font-size: var(--commission-font-size);
   }
 
   .commission p {
@@ -55,9 +65,22 @@ body {
 
   .divider {
     position: relative;
-    top: 18px;
-    height: 1.5px;
-    margin: 0 10px;
+    top: 27px;
+    height: 1px;
+    margin: 0 15px;
     background-color: #000000;
+  }
+  /* Heading, Forms, Button */
+  .heading {
+    text-align: center;
+    position: relative;
+    top: 45px;
+    font-size: 33px;
+  }
+  .input-form {
+    padding: 10rem;
+    text-align: left;
+    height: 100px;
+    width: 200px;
   }
 }
